@@ -66,6 +66,20 @@
 			isActive: false,
 			query: 'SELECT * FROM employees',
 			src: 'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/employees.csv'
+		},
+		{
+			id: 4,
+			name: 'Order',
+			isActive: false,
+			query: 'SELECT * FROM order_details',
+			src: 'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/order_details.csv'
+		},
+		{
+			id: 5,
+			name: 'Shippers',
+			isActive: false,
+			query: 'SELECT * FROM shippers',
+			src: 'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/shippers.csv'
 		}
 	];
 
@@ -359,6 +373,7 @@
 		grid-template-columns: 340px 1fr;
 		max-width: 100vw;
 	}
+
 
 	.Main {
 		background-color: #343541;
