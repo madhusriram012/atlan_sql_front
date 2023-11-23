@@ -71,28 +71,28 @@
 			id: 4,
 			name: 'Orders',
 			isActive: false,
-			query: 'SELECT * FROM customers',
+			query: 'SELECT * FROM orders',
 			src: 'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/order_details.csv'
 		},
 		{
 			id: 5,
 			name: 'Territories',
 			isActive: false,
-			query: 'SELECT * FROM customers',
+			query: 'SELECT * FROM territories',
 			src: 'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/territories.csv'
 		},
 		{
 			id: 6,
 			name: 'Suppliers',
 			isActive: false,
-			query: 'SELECT * FROM customers',
+			query: 'SELECT * FROM suppliers',
 			src: 'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/suppliers.csv'
 		},
 		{
 			id: 7,
 			name: 'Shippers',
 			isActive: false,
-			query: 'SELECT * FROM customers',
+			query: 'SELECT * FROM shippers',
 			src: 'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/shippers.csv'
 		},
 	];
