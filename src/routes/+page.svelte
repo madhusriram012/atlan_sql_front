@@ -254,7 +254,7 @@
 			</button>
 			<div class="Row--between gap-15 w-100">
 				<div class="Row--start Profile gap-5">
-					<img src="./avatar_logo.jpeg" alt="User" class="UserImage" loading="lazy" />
+					<img src="./avatar_logo.jpeg" alt="User" class="UserImage" width="40px" height= "40px" />
 					<div class="Col--a-start">
 						<h3 class="Username">Jhon Doe</h3>
 						<span class="UserEmail">
