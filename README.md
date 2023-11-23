@@ -37,6 +37,12 @@ The Major plugins or packages installed are gridjs, gridjs-svelte, papaparse, to
 <img width="699" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/e8750ca2-8a9d-4759-9679-1dfb5c380c77">
 
 
+## After Improvements
+
+<img width="1220" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/b85176b5-53f9-44b0-a7f2-570a0cd90d73">
+
+
+
 ### Brainstorming
 
 Brainstorming started with gathering necessary information required for the data analystics team to have smooth expereince by using the tool.
@@ -67,10 +73,11 @@ With the gathered information, few important topics were picked and featured wer
 3. Environments - The user can switch between different environments. As in real time, the user will have multiple environments to work on.
 
 
-### Optimisations
+### Optimizations
 
 1. Used pagination method to render a large amount of rows in application without breaking the browser, or without crashing it and using this method it provides the results very fast.
 2. The most time-saving optimisation would be dynamic fetching. The rows of a table are fetched only when the user requests it. This saves a lot of seconds off our initial load time, by distributing that across requests.
 3. Svelte itself is faster in initial load times and tends to have a more responsive user interface than most of the frameworks like React.
-
+4.Image was fetched directly from a website and lazy loading was enabled so it increased the load time so added the image along with the code in local and removed lazy loading as the image comes in the main page.
+5.Did cache Busting in order to change the URL of the static files whenever one make updates, forcing the browser to fetch the new version.
 
