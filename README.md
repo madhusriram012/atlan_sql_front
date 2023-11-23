@@ -35,26 +35,34 @@ The Major plugins or packages installed are gridjs, gridjs-svelte, papaparse, to
 <img width="699" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/e8750ca2-8a9d-4759-9679-1dfb5c380c77">
 
 
-
 ### Brainstorming
 
-For day-to-day life, data analytics might require,
-1. Query execution and result visualization
-2. Query history and version control
-3. Performance tuning suggestion
-4. Security and access control
-5. Collaboration and sharing. With these initial thoughts I started implementing the features
+Brainstorming started with gathering necessary information required for the data analystics team to have smooth expereince by using the tool.
+With the gathered information, few important topics were picked and featured were built based on those needs. The following are the topics the features were focussed on,
+* Query execution and result visualization
+* Query history
+* Performance tuning suggestion
+* Security and access control
+* Collaboration and sharing.
+
 
 ### Features
 
-1. Tab Based Interface: An easy-to-use tab based interface allows the user to switch between multiple queries at once. Each tab maintains its own separate state, so as long as you don't reload the page, you can jump right back to where you left a tab.
+1. Tab Based Interface (Query execution and result visualization): Tab based interface allows the user to switch between multiple queries at once. Helps to improve their speed and keep different queires seperately in case if they need to switch. 
+2. Dynamic Table Views (Query execution and result visualization): The list of tables will be fetched without loading all the data. Only when the user selects the name of a table, the results will be loaded in pagination view. Keeping the application lightweight, and swift.
+3. Result Table Features (Query execution and result visualization): This gives flexitiy for the user to do actions on the fetched results. The user can sort/search/move to different set of results using pagination.
+4. Search Tables (Query execution and result visualization): The user can search for the table names. In real production environment, there will be lot of tables which needs to be searched. This feature saves time by identifying required table faster.
+5. History  (Query History): History tab shows the list of quiers which was used. 
+6. Dedicated account (Security and access control): The user will have decidated account which allows to authenticate and authorise user. Some users can access certai table and some can't. This account helps to manage these restrictions.
+7. Sharing (Collaboration and sharing): Users can share the query to the users in the organisation or the team. 
+8. Download (Collaboration and sharing): User can download the result in different formats (CSV, Json , XML) for future use or also for sharing.
+9. Result Statistics (Performance tuning suggestion): The statics about the number of rows and the time taken were displayed. This helps to tune the queires to have better performance. 
 
-2. Dynamic Table Views: The list of tables is fetched at first, but the actual data isn't. Only when you click on the name of a table, are the entries fetched. Keeping the application lightweight, and swift.
+### Few more add-ons:
 
-3. Result Table Features: You can sort the data in alphabetical or in ascending order and the vice versa by just clicking the up and down arrows and one can view the schema of a particular table. The cool feature is that one can search in the table using the input box which fetches the required text instantly.It also shows how many rows are being displayed.
-
-4. Result Statistics: The user will also be alerted about the time taken to complete a query, giving the user a measure to check the performance of the system.
-Ability to save the results as JSON, XML, or CSV: This application includes functionality to save the results of a query in JSON, XML, and CSV formats. 
+1. Saved Option - This helps the user to save the report/query which can be used later. 
+2. Schema - The result table also shows the schema of the table which will be useful to identify the types of the columns.
+3. Environments - The user can switch between different environments. As in real time, the user will have multiple environments to work on.
 
 
 ### Optimisations
