@@ -60,11 +60,11 @@ With the gathered information, few important topics were picked and features wer
 
 ### Features
 
-1. Tab Based Interface (Query execution and result visualization): Tab based interface allows the user to switch between multiple queries at once. Helps to improve their speed and keep different queires seperately in case if they need to switch. 
+1. Tab Based Interface (Query execution and result visualization): Tab based interface allows the user to switch between multiple queries at once. Helps to improve their speed and keep different queries seperately in case if they need to switch. 
 2. Dynamic Table Views (Query execution and result visualization): The list of tables will be fetched without loading all the data. Only when the user selects the name of a table, the results will be loaded in pagination view. Keeping the application lightweight, and swift.
 3. Result Table Features (Query execution and result visualization): This gives flexibility for the user to do actions on the fetched results. The user can sort/search/move to different set of results using pagination.
 4. Search Tables (Query execution and result visualization): The user can search for the table names. In real production environment, there will be lot of tables which needs to be searched. This feature saves time by identifying required table faster.
-5. History  (Query History): History tab shows the list of quiers which was used. 
+5. History  (Query History): History tab shows the list of queries which was used. 
 6. Dedicated account (Security and access control): The user will have dedicated account which allows to authenticate and authorise user. Some users can access certain table and some can't. This account helps to manage these restrictions.
 7. Sharing (Collaboration and sharing): Users can share the query to the users in the organisation or the team. 
 8. Download (Collaboration and sharing): User can download the result in different formats (CSV, Json , XML) for future use or also for sharing.
