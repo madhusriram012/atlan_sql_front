@@ -284,6 +284,13 @@
 						<div class="Row--j-end gap-15">
 							<button
 								class="FancyButton"
+								data-icon={String.fromCharCode(61584)}
+								on:click={() => {}}
+							>
+								Download Query
+							</button>
+							<button
+								class="FancyButton"
 								data-icon={String.fromCharCode(59574)}
 								on:click={() => {
 									if (currentItem) {
