@@ -37,13 +37,13 @@ The Major plugins or packages installed are gridjs, gridjs-svelte, papaparse, to
 
 ### Features
 
-1.Tab Based Interface: An easy-to-use tab based interface allows the user to switch between multiple queries at once. Each tab maintains its own separate state, so as long as you don't reload the page, you can jump right back to where you left a tab.
+1. Tab Based Interface: An easy-to-use tab based interface allows the user to switch between multiple queries at once. Each tab maintains its own separate state, so as long as you don't reload the page, you can jump right back to where you left a tab.
 
-Dynamic Table Views: The list of tables is fetched at first, but the actual data isn't. Only when you click on the name of a table, are the entries fetched. Keeping the application lightweight, and swift.
+2. Dynamic Table Views: The list of tables is fetched at first, but the actual data isn't. Only when you click on the name of a table, are the entries fetched. Keeping the application lightweight, and swift.
 
-Result Table Features: You can sort the data in alphabetical or in ascending order and the vice versa by just clicking the up and down arrows and one can view the schema of a particular table. The cool feature is that one can search in the table using the input box which fetches the required text instantly.It also shows how many rows are being displayed.
+3. Result Table Features: You can sort the data in alphabetical or in ascending order and the vice versa by just clicking the up and down arrows and one can view the schema of a particular table. The cool feature is that one can search in the table using the input box which fetches the required text instantly.It also shows how many rows are being displayed.
 
-Result Statistics: The user will also be alerted about the time taken to complete a query, giving the user a measure to check the performance of the system.
+4. Result Statistics: The user will also be alerted about the time taken to complete a query, giving the user a measure to check the performance of the system.
 Ability to save the results as JSON, XML, or CSV: This application includes functionality to save the results of a query in JSON, XML, and CSV formats. 
 
 
