@@ -34,7 +34,7 @@ The Major plugins or packages installed are gridjs, gridjs-svelte, papaparse, to
 
 ### Performance Audit
 
-Websites used to check : 1. (https://gtmetrix.com/reports/madhu-atlan-sql-editor.netlify.app/ulYJ3Xg9/)[GTMetrix]
+Websites used to check : 1. [GTMetrix](https://gtmetrix.com/reports/madhu-atlan-sql-editor.netlify.app/ulYJ3Xg9/)
 
 ## Before Improvements
 
