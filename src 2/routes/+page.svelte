@@ -100,7 +100,6 @@
 	$: currentItem = null as (typeof history)[0] | null;
 	$: currentItemData = null as any;
 	$: activeTab = 'data';
-	$: activeView = 'table';
 </script>
 
 <div class="Home">
@@ -111,130 +110,62 @@
 			<option>Staging</option>
 			<option>Production</option>
 		</select>
-		<div class="Row--between gap-10 w-100" style="margin-top: 20px;">
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-			<h2
-				class="w-100"
-				style="text-align: center; cursor:pointer"
-				on:click={() => {
-					activeView = 'table';
-				}}
-			>
-				Tables
-			</h2>
-			<hr style="height: 100%; margin: 0;" />
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-			<h2
-				class="w-100"
-				style="text-align: center; cursor:pointer"
-				on:click={() => {
-					activeView = 'History';
-				}}
-			>
-				History
-			</h2>
-			<hr style="height: 100%; margin: 0;" />
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-			<h2
-				class="w-100"
-				style="text-align: center; cursor:pointer"
-				on:click={() => {
-					activeView = 'Saved';
-				}}
-			>
-				Saved
-			</h2>
-		</div>
-		{#if activeView === 'table'}
-			<div class="Row--start gap-10 w-100">
-				<input class="FancyInput" placeholder="Search tables..." />
+		<h2>History</h2>
+		{#each history as item, index (item.id)}
+			<div class="Aside--item Row--start" class:selected={item.isActive}>
+				<a
+					on:click={() => {
+						history.forEach((item) => {
+							item.isActive = false;
+						});
+						history[index].isActive = true;
+						currentItem = history[index];
+						currentItemData = null;
+					}}
+					href={`#${item.id}`}
+				>
+					{item.name}
+				</a>
 				<button
 					class="FancyButton"
-					data-icon={String.fromCharCode(59574)}
-					style="height: 100%; width: auto;"
+					data-icon={String.fromCharCode(58829)}
+					on:click={() => {
+						history = history.filter((_, i) => i !== index);
+						if (history.length) {
+							window.location.hash = `#${history[history.length - 1].id}`;
+						} else {
+							window.location.hash = '';
+						}
+					}}
 				/>
 			</div>
-			<ul style="max-height: 100%; overflow-y: auto" class="Col--j-start gap-10 w-100">
-				{#each history as item, index (item.id)}
-					<li class="Aside--item Row--start" class:selected={item.isActive}>
-						<a
-							on:click={() => {
-								history.forEach((item) => {
-									item.isActive = false;
-								});
-								history[index].isActive = true;
-								currentItem = history[index];
-								currentItemData = null;
-							}}
-							href={`#${item.id}`}
-						>
-							{item.name}
-						</a>
-						<button
-							class="FancyButton"
-							data-icon={String.fromCharCode(58829)}
-							on:click={() => {
-								history = history.filter((_, i) => i !== index);
-								if (history.length) {
-									window.location.hash = `#${history[history.length - 1].id}`;
-								} else {
-									window.location.hash = '';
-								}
-							}}
-						/>
-					</li>
-				{/each}
-			</ul>
-		{:else if activeView === 'History'}
-			<h2>History</h2>
-			<em>No history yet</em>
-		{:else}
-			<h2>Saved</h2>
-			<em>No saved queries yet</em>
-		{/if}
-		<div style="margin-top: auto; background-color: black;" class="Col--center w-100 gap-10">
-			<button
-				class="FancyButton w-100"
-				on:click={() => {
-					const newId = history.length + 1;
-					const randomQuery = sourceList[Math.floor(Math.random() * sourceList.length)];
-					history.forEach((item) => {
-						item.isActive = false;
-					});
-					history = [
-						...history,
-						{
-							id: newId,
-							name: `Query ${newId}`,
-							isActive: true,
-							query: '',
-							src: randomQuery.link
-						}
-					];
-					window.location.hash = `#${newId}`;
+		{/each}
+		<button
+			class="FancyButton"
+			on:click={() => {
+				const newId = history.length + 1;
+				const randomQuery = sourceList[Math.floor(Math.random() * sourceList.length)];
+				history.forEach((item) => {
+					item.isActive = false;
+				});
+				history = [
+					...history,
+					{
+						id: newId,
+						name: `Query ${newId}`,
+						isActive: true,
+						query: '',
+						src: randomQuery.link
+					}
+				];
+				window.location.hash = `#${newId}`;
 
-					currentItem = history[history.length - 1];
-					currentItemData = null;
-				}}
-			>
-				New Query
-			</button>
-			<div class="Row--between gap-15 w-100">
-				<div class="Row--start Profile gap-5">
-					<img src="https://i.pravatar.cc/150?img=3" alt="User" class="UserImage" />
-					<div class="Col--a-start">
-						<h3 class="Username">Jhon Doe</h3>
-						<span class="UserEmail">
-							<a href="mailto:jhon@doe">jhon@doe.com</a>
-						</span>
-					</div>
-				</div>
-				<span data-icon={String.fromCharCode(59834)} style="cursor: pointer;" />
-			</div>
-		</div>
+				currentItem = history[history.length - 1];
+				currentItemData = null;
+			}}
+		>
+			New Query
+		</button>
 	</aside>
 	<main class="Main Col--j-start gap-15">
 		{#if currentItem}
@@ -388,7 +319,7 @@
 					class="Col--center gap-15"
 					style="padding: 40px; height: 150px; border-radius: 5px; background-color: #202123; color: #fff;"
 				>
-					Select a query from the history or create a new one
+					Select a query from the table or create a new one
 					<button
 						class="FancyButton"
 						on:click={() => {
@@ -542,30 +473,11 @@
 		background-color: #000;
 		padding: 20px;
 		position: relative;
-		overflow-y: auto;
-		& > select,
-		& input {
-			@include box(100%, 40px);
-			background-color: #202123;
-
-			border: 1px solid #4d5055;
-		}
 
 		& > select {
-			flex-shrink: 0;
-		}
-		& input {
-			border-radius: 5px;
-			padding: 0 10px;
-		}
-
-		.Profile {
-			& > img {
-				width: 40px;
-				height: 40px;
-				border-radius: 50%;
-				margin-right: 10px;
-			}
+			@include box(100%, 40px);
+			background-color: #202123;
+			border: 1px solid #4d5055;
 		}
 
 		& > h2 {
@@ -616,7 +528,7 @@
 			}
 		}
 
-		& > div > .FancyButton {
+		& > .FancyButton {
 			@include box(100%, 40px);
 			margin-top: auto;
 			background-color: #97b9fc;
