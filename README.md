@@ -34,6 +34,14 @@ The Major plugins or packages installed are gridjs, gridjs-svelte, papaparse, to
 
 <img width="1436" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/a057b402-56a5-435c-b57e-e0bce8d503b0">
 
+### Brainstorming
+
+For day-to-day life, data analytics might require,
+1. Query execution and result visualization
+2. Query history and version control
+3. Performance tuning suggestion
+4. Security and access control
+5. Collaboration and sharing. With these initial thoughts I started implementing the features
 
 ### Features
 
