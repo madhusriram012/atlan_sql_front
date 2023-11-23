@@ -34,6 +34,8 @@ The Major plugins or packages installed are gridjs, gridjs-svelte, papaparse, to
 
 ### Performance Audit
 
+Websites used to check : 1. (https://gtmetrix.com/reports/madhu-atlan-sql-editor.netlify.app/ulYJ3Xg9/)[GTMetrix]
+
 ## Before Improvements
 
 <img width="846" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/de4cc81c-fded-42ae-8aa1-7fd4853825bb">
@@ -48,7 +50,7 @@ The Major plugins or packages installed are gridjs, gridjs-svelte, papaparse, to
 ### Brainstorming
 
 Brainstorming started with gathering necessary information required for the data analystics team to have smooth expereince by using the tool.
-With the gathered information, few important topics were picked and featured were built based on those needs. The following are the topics the features were focussed on,
+With the gathered information, few important topics were picked and features were built based on those needs. The following are the topics the features were focussed on,
 * Query execution and result visualization
 * Query history
 * Performance tuning suggestion
@@ -60,10 +62,10 @@ With the gathered information, few important topics were picked and featured wer
 
 1. Tab Based Interface (Query execution and result visualization): Tab based interface allows the user to switch between multiple queries at once. Helps to improve their speed and keep different queires seperately in case if they need to switch. 
 2. Dynamic Table Views (Query execution and result visualization): The list of tables will be fetched without loading all the data. Only when the user selects the name of a table, the results will be loaded in pagination view. Keeping the application lightweight, and swift.
-3. Result Table Features (Query execution and result visualization): This gives flexitiy for the user to do actions on the fetched results. The user can sort/search/move to different set of results using pagination.
+3. Result Table Features (Query execution and result visualization): This gives flexibility for the user to do actions on the fetched results. The user can sort/search/move to different set of results using pagination.
 4. Search Tables (Query execution and result visualization): The user can search for the table names. In real production environment, there will be lot of tables which needs to be searched. This feature saves time by identifying required table faster.
 5. History  (Query History): History tab shows the list of quiers which was used. 
-6. Dedicated account (Security and access control): The user will have decidated account which allows to authenticate and authorise user. Some users can access certai table and some can't. This account helps to manage these restrictions.
+6. Dedicated account (Security and access control): The user will have dedicated account which allows to authenticate and authorise user. Some users can access certain table and some can't. This account helps to manage these restrictions.
 7. Sharing (Collaboration and sharing): Users can share the query to the users in the organisation or the team. 
 8. Download (Collaboration and sharing): User can download the result in different formats (CSV, Json , XML) for future use or also for sharing.
 9. Result Statistics (Performance tuning suggestion): The statics about the number of rows and the time taken were displayed. This helps to tune the queires to have better performance. 
@@ -78,8 +80,14 @@ With the gathered information, few important topics were picked and featured wer
 ### Optimizations
 
 1. Used pagination method to render a large amount of rows in application without breaking the browser, or without crashing it and using this method it provides the results very fast.
-2. The most time-saving optimisation would be dynamic fetching. The rows of a table are fetched only when the user requests it. This saves a lot of seconds off our initial load time, by distributing that across requests.
+
+2. The most time-saving optimisation would be dynamic fetching. The rows of a table are fetched only when the user requests it. This saves a lot of seconds off our initial load time, 
+   by distributing that across requests.
+   
 3. Svelte itself is faster in initial load times and tends to have a more responsive user interface than most of the frameworks like React.
-4.Image was fetched directly from a website and lazy loading was enabled so it increased the load time so added the image along with the code in local and removed lazy loading as the image comes in the main page.
+   
+4. Image was fetched directly from a website and lazy loading was enabled so it increased the load time so added the image along with the code in local and removed lazy loading as the 
+   image comes in the main page.
+
 5.Did cache Busting in order to change the URL of the static files whenever one make updates, forcing the browser to fetch the new version.
 
