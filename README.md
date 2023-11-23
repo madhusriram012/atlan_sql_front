@@ -89,5 +89,5 @@ With the gathered information, few important topics were picked and features wer
 4. Image was fetched directly from a website and lazy loading was enabled so it increased the load time so added the image along with the code in local and removed lazy loading as the 
    image comes in the main page.
 
-5.Did cache Busting in order to change the URL of the static files whenever one make updates, forcing the browser to fetch the new version.
+ 5.Did cache Busting in order to change the URL of the static files whenever one make updates, forcing the browser to fetch the new version.
 
