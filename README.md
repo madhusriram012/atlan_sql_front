@@ -32,7 +32,8 @@ The Major plugins or packages installed are gridjs, gridjs-svelte, papaparse, to
 
 ### Performance Audit
 
-<img width="406" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/8e004718-628c-436e-891a-fc04ad6eec70">
+<img width="699" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/e8750ca2-8a9d-4759-9679-1dfb5c380c77">
+
 
 
 ### Brainstorming
