@@ -36,14 +36,14 @@ The Major plugins or packages installed are gridjs, gridjs-svelte, papaparse, to
 
 ## Before Improvements
 
-<img width="772" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/615b7aaf-8d08-4940-8a11-c3a5691bc2c8">
+<img width="846" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/de4cc81c-fded-42ae-8aa1-7fd4853825bb">
 
 
 ## After Improvements
 
 <img width="1220" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/b85176b5-53f9-44b0-a7f2-570a0cd90d73">
 
-<img width="699" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/e8750ca2-8a9d-4759-9679-1dfb5c380c77">
+<img width="772" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/615b7aaf-8d08-4940-8a11-c3a5691bc2c8">
 
 ### Brainstorming
 
