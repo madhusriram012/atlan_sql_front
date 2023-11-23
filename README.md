@@ -32,6 +32,11 @@ The JavaScript framework I chose was SVELTE as it is better for smaller, more dy
  
 The Major plugins or packages installed are gridjs, gridjs-svelte, papaparse, to-json-schema.
 
+### Demo
+
+[DEMO_FRONTEND_ATLAN](https://drive.google.com/file/d/16U8vS3gwn7VB3tA4CGdb4qpdI_hjLjQv/view?usp=sharing)
+
+
 ### Performance Audit
 
 Websites used to check : 1. [GTMetrix](https://gtmetrix.com/reports/madhu-atlan-sql-editor.netlify.app/ulYJ3Xg9/) , 2. [WebPageTest](https://www.webpagetest.org/), 3.[LightHouse](https://pagespeed.web.dev/)
