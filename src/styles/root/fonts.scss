@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+$version: 'v1';
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap&version=#{$version}");
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&display=swap&version=#{$version}');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap&version=#{$version}');
 
 // font-family: 'Inter', sans-serif;
 // font-family: 'Montserrat', sans-serif;
@@ -9,6 +10,7 @@
 @font-face {
     font-family: "Icons";
     src: url("/assets/fonts/Icons.woff2") format("woff2");
+    font-display:swap;
 }
 
 [data-icon],

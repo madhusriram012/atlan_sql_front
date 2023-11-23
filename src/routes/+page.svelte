@@ -5,7 +5,7 @@
 	import Grid from 'gridjs-svelte';
 	// @ts-ignore
 	import toJsonSchema from 'to-json-schema';
-
+	const version = 'v1';
 	const sourceList = [
 		{
 			query: 'SELECT * FROM employee_territories',
@@ -94,7 +94,7 @@
 			isActive: false,
 			query: 'SELECT * FROM shippers',
 			src: 'https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/shippers.csv'
-		},
+		}
 	];
 
 	// Get the item ID from the site hash query
@@ -134,11 +134,13 @@
 <div class="Home">
 	<aside class="Aside Col--j-start gap-10">
 		<h2>Environments</h2>
-		<select class="FancySelect">
-			<option>Development</option>
-			<option>Staging</option>
-			<option>Production</option>
+		
+		<select class="FancySelect" aria-label="Select Environment">
+			<option value="Development">Development</option>
+			<option value="Staging">Staging</option>
+			<option value="Production">Production</option>
 		</select>
+
 		<div class="Row--between gap-10 w-100" style="margin-top: 40px;">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
@@ -252,7 +254,7 @@
 			</button>
 			<div class="Row--between gap-15 w-100">
 				<div class="Row--start Profile gap-5">
-					<img src="https://i.pravatar.cc/150?img=3" alt="User" class="UserImage" />
+					<img src="./avatar_logo.jpeg" alt="User" class="UserImage" loading="lazy" />
 					<div class="Col--a-start">
 						<h3 class="Username">Jhon Doe</h3>
 						<span class="UserEmail">
@@ -298,9 +300,11 @@
 							<details class="FancyMenu">
 								<summary style="height: 40px;">Download</summary>
 								<ul class="FancyMenu__content" data-align="right" style="width: 150px;">
-									<button class="FancyButton" style="width: 100%;"> JSON </button>
-									<button class="FancyButton" style="width: 100%;"> CSV </button>
-									<button class="FancyButton" style="width: 100%;"> XML </button>
+									<button class="FancyButton" style="width: 100%;" aria-label="Close">
+										JSON
+									</button>
+									<button class="FancyButton" style="width: 100%;" aria-label="Close"> CSV </button>
+									<button class="FancyButton" style="width: 100%;" aria-label="Close"> XML </button>
 								</ul>
 							</details>
 							<button
@@ -593,6 +597,7 @@
 				height: 40px;
 				border-radius: 50%;
 				margin-right: 10px;
+				aspect-ratio: 1/1;
 			}
 		}
 
@@ -661,5 +666,5 @@
 			}
 		}
 	}
-	@import 'https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css';
+	@import 'https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css?version=${version}';
 </style>
