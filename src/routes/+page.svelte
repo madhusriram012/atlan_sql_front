@@ -284,10 +284,10 @@
 						<div class="Row--j-end gap-15">
 							<button
 								class="FancyButton"
-								data-icon={String.fromCharCode(61584)}
+								data-icon={String.fromCharCode(57697)}
 								on:click={() => {}}
 							>
-								Download Query
+								Save Query
 							</button>
 							<button
 								class="FancyButton"
