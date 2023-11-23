@@ -23,6 +23,9 @@ After running the above command, open [http://localhost:5173](http://localhost:5
 The JavaScript framework I chose was SVELTE as it is better for smaller, more dynamic projects. Svelte is considered one of the fastest JavaScript frameworks and it is faster than React. It uses a compiler that does most of the work during build time, so there's no need to use a virtual DOM. Svelte shifts much of the work from the browser to the build process. This means that the framework itself is not included in the final bundle sent to the browser, resulting in smaller and more efficient runtime code.
  
 The Major plugins or packages installed are gridjs, gridjs-svelte, papaparse, to-json-schema.
-![performance_audit](https://github.com/madhusriram012/atlan_sql_front/assets/75003175/16f760eb-12ea-4341-8a3a-f9264275e72b)
+
+
+<img width="1436" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/a057b402-56a5-435c-b57e-e0bce8d503b0">
+
 
 
