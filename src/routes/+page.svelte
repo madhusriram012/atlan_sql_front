@@ -2,9 +2,10 @@
 	import { onMount } from 'svelte';
 	// @ts-ignore
 	import { parse } from 'papaparse';
-
+	import { sourceList } from '../data/tables';
 	// @ts-ignore
 	import toJsonSchema from 'to-json-schema';
+	import { tableOrig } from '../data/tables';
 
 	import Aside from '../components/Aside.svelte';
 	import Home from '../components/Home.svelte';
@@ -12,8 +13,11 @@
 	$: currentItemData = null as any;
 	$: activeTab = 'data';
 	$: activeView = 'table';
+	$: table = tableOrig;
+	// Get the item ID from the site hash query
+	$: itemId = null as number | null;
 
-	function changeActiveView(e: Event & { detail: string }) {
+	function changeActiveView(e: Event & { detail: 'tables' }) {
 		activeView = e.detail;
 	}
 
@@ -25,16 +29,6 @@
 		table[index].isActive = true;
 		currentItem = table[index];
 		currentItemData = null;
-	};
-
-	const filterTable = (e: Event & { detail: number }) => {
-		let itemID = e.detail;
-		table = table.filter((item: any) => item.id !== itemID);
-		if (table.length) {
-			window.location.hash = `#${table[table.length - 1].id}`;
-		} else {
-			window.location.hash = '';
-		}
 	};
 
 	const pickRandomTable = () => {
@@ -59,6 +53,16 @@
 		currentItemData = null;
 	};
 
+	const filterTable = (e: Event & { detail: number }) => {
+		let itemID = e.detail;
+		table = table.filter((item: any) => item.id !== itemID);
+		if (table.length) {
+			window.location.hash = `#${table[table.length - 1].id}`;
+		} else {
+			window.location.hash = '';
+		}
+	};
+
 	const runQuery = () => {
 		if (currentItem) {
 			// fetch the data from the source and pass it to the main component
@@ -72,14 +76,6 @@
 	const changeActiveTab = (e: Event & { detail: string }) => {
 		activeTab = e.detail;
 	};
-
-	import { tableOrig } from '../data/tables';
-
-	$: table = tableOrig;
-	import { sourceList } from '../data/tables';
-
-	// Get the item ID from the site hash query
-	$: itemId = null as number | null;
 
 	onMount(() => {
 		const hash = window.location.hash;
@@ -112,9 +108,9 @@
 		{table}
 		{activeView}
 		on:changeActiveView={changeActiveView}
-		on:changeActiveTableItem={changeActiveTableItem}
-		on:filterTable={filterTable}
 		on:pickRandomTable={pickRandomTable}
+		on:filterTable={filterTable}
+		on:changeActiveTableItem={changeActiveTableItem}
 	/>
 	<Home
 		{currentItem}
@@ -127,5 +123,5 @@
 </div>
 
 <style lang="scss" global>
-	@import '../data/styles.scss';
+	@import '../styles/root/styles.scss';
 </style>

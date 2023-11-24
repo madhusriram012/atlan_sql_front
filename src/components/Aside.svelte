@@ -1,10 +1,11 @@
 <script lang="ts">
     import {createEventDispatcher} from 'svelte';
-    export let table: any;
     import { onMount } from 'svelte';
+    export let table: any;
     export let activeView: 'tables' | string;
 
     const dispatch = createEventDispatcher();
+
     function changeActiveView(param: string){
         dispatch('changeActiveView', param);
     }
@@ -20,8 +21,8 @@
     function pickRandomTable(){
         dispatch('pickRandomTable');
     }
-    onMount(() => {
-        
+    
+    onMount(() => {      
         changeActiveView('tables');
     });
 </script>
