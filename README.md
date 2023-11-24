@@ -1,6 +1,7 @@
 ## ONLINE SQL-EDITOR
 
  This is an online SQL editor built especially for the frontend task of Atlan's front-end internship. This particular project is built using Svelte, and SCSS. 
+ NOTE: Instead of using components, I'm employing modularized class names such as FancyInput, FancySelect, and so forth.
 
 ### How to run
 
