@@ -12,7 +12,7 @@
 	$: currentItem = null as (typeof table)[0] | null;
 	$: currentItemData = null as any;
 	$: activeTab = 'data';
-	$: activeView = 'table';
+	$: activeView = 'tables';
 	$: table = tableOrig;
 	// Get the item ID from the site hash query
 	$: itemId = null as number | null;
