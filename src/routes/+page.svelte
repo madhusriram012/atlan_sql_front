@@ -7,7 +7,7 @@
 	import toJsonSchema from 'to-json-schema';
 	import { tableOrig } from '../data/tables';
 
-	import Aside from '../components/Aside.svelte';
+	import Aside from '../components/SidePane.svelte';
 	import Home from '../components/Home.svelte';
 	$: currentItem = null as (typeof table)[0] | null;
 	$: currentItemData = null as any;
