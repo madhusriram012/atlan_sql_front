@@ -107,8 +107,8 @@
 	<Aside
 		{table}
 		{activeView}
+		{pickRandomTable}
 		on:changeActiveView={changeActiveView}
-		on:pickRandomTable={pickRandomTable}
 		on:filterTable={filterTable}
 		on:changeActiveTableItem={changeActiveTableItem}
 	/>

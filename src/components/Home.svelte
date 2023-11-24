@@ -9,6 +9,7 @@
 	export let activeTab: any;
 
 	const dispatch = createEventDispatcher();
+	
 	function runQuery() {
 		dispatch('runQuery');
 	}
@@ -16,7 +17,6 @@
 	function changeActiveTab(param: string) {
 		dispatch('changeActiveTab', param);
 	}
-
 	function pickRandomTable() {
 		dispatch('pickRandomTable');
 	}

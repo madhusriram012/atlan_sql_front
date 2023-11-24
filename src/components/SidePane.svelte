@@ -1,9 +1,11 @@
 <script lang="ts">
     import {createEventDispatcher} from 'svelte';
     import { onMount } from 'svelte';
+	import Environments from './Environments.svelte';
+	import NewQuery from './NewQuery.svelte';
     export let table: any;
     export let activeView: 'tables' | string;
-
+    export let pickRandomTable:any;
     const dispatch = createEventDispatcher();
 
     function changeActiveView(param: string){
@@ -17,10 +19,6 @@
     function filterTable(param: number){
         dispatch('filterTable', param);
     }
-
-    function pickRandomTable(){
-        dispatch('pickRandomTable');
-    }
     
     onMount(() => {      
         changeActiveView('tables');
@@ -28,13 +26,8 @@
 </script>
 
 <aside class="Aside Col--j-start gap-10">
-    <h2>Environments</h2>
-    
-    <select class="FancySelect" aria-label="Select Environment">
-        <option value="Development">Development</option>
-        <option value="Staging">Staging</option>
-        <option value="Production">Production</option>
-    </select>
+
+    <Environments/>
 
     <div class="Row--between gap-10 w-100" style="margin-top: 40px;">
         <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -100,24 +93,5 @@
         <h2>Saved</h2>
         <em>No saved queries yet</em>
     {/if}
-    <div style="margin-top: auto; background-color: black;" class="Col--center w-100 gap-10">
-        <button
-            class="FancyButton w-100"
-            on:click={pickRandomTable}
-        >
-            New Query
-        </button>
-        <div class="Row--between gap-15 w-100">
-            <div class="Row--start Profile gap-5">
-                <img src="./avatar_logo.jpeg" alt="User" class="UserImage" width="40px" height= "40px" />
-                <div class="Col--a-start">
-                    <h3 class="Username">Jhon Doe</h3>
-                    <span class="UserEmail">
-                        <a href="mailto:jhon@doe">jhon@doe.com</a>
-                    </span>
-                </div>
-            </div>
-            <span data-icon={String.fromCharCode(59834)} style="cursor: pointer;" />
-        </div>
-    </div>
+<NewQuery on:pickRandomTable={pickRandomTable}/>
 </aside>
