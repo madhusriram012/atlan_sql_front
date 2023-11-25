@@ -51,7 +51,9 @@ Websites used to check : 1. [GTMetrix](https://gtmetrix.com/reports/madhu-atlan-
 
 <img width="1220" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/b85176b5-53f9-44b0-a7f2-570a0cd90d73">
 
-![image](https://github.com/madhusriram012/atlan_sql_front/assets/75003175/79bc9cd0-af7f-4077-a6fd-ff3a09913c06)
+
+<img width="606" alt="image" src="https://github.com/madhusriram012/atlan_sql_front/assets/75003175/76574ec6-5ba2-4063-b658-4722a4c737dc">
+
 
 
 ### Brainstorming
